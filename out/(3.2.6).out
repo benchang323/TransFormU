@@ -1,0 +1,142 @@
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at RoBERTa-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Specified arguments: Namespace(small_subset=False, num_epochs=15, lr=0.0001, batch_size=32, device='cuda', model='RoBERTa-base')
+Loading the dataset ...
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.623875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.626625}
+ - Average validation metrics: accuracy={'accuracy': 0.6608562691131499}
+
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.689375}
+ - Average validation metrics: accuracy={'accuracy': 0.7223241590214067}
+
+Epoch 4 training:
+
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.7405}
+ - Average validation metrics: accuracy={'accuracy': 0.7516819571865443}
+Epoch 5 training:
+
+
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.77175}
+ - Average validation metrics: accuracy={'accuracy': 0.7651376146788991}
+Epoch 6 training:
+
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.804}
+ - Average validation metrics: accuracy={'accuracy': 0.7730886850152905}
+Epoch 7 training:
+
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.823625}
+ - Average validation metrics: accuracy={'accuracy': 0.7718654434250765}
+Epoch 8 training:
+
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.840125}
+ - Average validation metrics: accuracy={'accuracy': 0.7709480122324159}
+Epoch 9 training:
+
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.854625}
+ - Average validation metrics: accuracy={'accuracy': 0.77217125382263}
+Epoch 10 training:
+
+ ===> Epoch 10
+ - Average training metrics: accuracy={'accuracy': 0.86925}
+ - Average validation metrics: accuracy={'accuracy': 0.7678899082568807}
+Epoch 11 training:
+
+ ===> Epoch 11
+ - Average training metrics: accuracy={'accuracy': 0.8855}
+ - Average validation metrics: accuracy={'accuracy': 0.7767584097859327}
+Epoch 12 training:
+
+ ===> Epoch 12
+ - Average training metrics: accuracy={'accuracy': 0.891375}
+ - Average validation metrics: accuracy={'accuracy': 0.7697247706422018}
+Epoch 13 training:
+
+ ===> Epoch 13
+ - Average training metrics: accuracy={'accuracy': 0.900375}
+ - Average validation metrics: accuracy={'accuracy': 0.773394495412844}
+Epoch 14 training:
+
+ ===> Epoch 14
+ - Average training metrics: accuracy={'accuracy': 0.902875}
+ - Average validation metrics: accuracy={'accuracy': 0.771559633027523}
+Epoch 15 training:
+
+ ===> Epoch 15
+ - Average training metrics: accuracy={'accuracy': 0.9065}
+ - Average validation metrics: accuracy={'accuracy': 0.771559633027523}
+torch.cuda.memory_allocated: 0.486443GB
+torch.cuda.memory_reserved: 4.210938GB
+torch.cuda.max_memory_reserved: 4.210938GB
+Sat Mar  9 02:15:41 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  | 00000000:01:00.0 Off |                   On |
+| N/A   32C    P0              76W / 500W |   9776MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  | 00000000:41:00.0 Off |                   On |
+| N/A   23C    P0              53W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  | 00000000:81:00.0 Off |                   On |
+| N/A   24C    P0              50W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  | 00000000:C1:00.0 Off |                   On |
+| N/A   23C    P0              49W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| MIG devices:                                                                          |
++------------------+--------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                   Memory-Usage |        Vol|      Shared           |
+|      ID  ID  Dev |                     BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |
+|                  |                                |        ECC|                       |
+|==================+================================+===========+=======================|
+|  0    8   0   0  |            4436MiB /  9728MiB  | 14      0 |  1   0    0    0    0 |
+|                  |               2MiB / 16383MiB  |           |                       |
++------------------+--------------------------------+-----------+-----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0    8    0    2838906      C   python                                     4416MiB |
++---------------------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.771559633027523}
+ - Average TEST metrics: accuracy={'accuracy': 0.7743517869656622}
